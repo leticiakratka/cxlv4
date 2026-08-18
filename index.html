@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N9GCCZSW');</script>
+    <!-- End Google Tag Manager -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes, maximum-scale=5">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#2A201A">
+    <title>Caixa Livre 2.0 | Faça sobrar dinheiro todo mês</title>
+    <meta name="description" content="Copie o sistema de organização financeira que faz sobrar até 30% do que você ganha todos os meses. Uma planilha, uma IA e 30 minutos por semana.">
+
+    <link rel="preconnect" href="https://pay.voompcreators.com.br">
+    <link rel="dns-prefetch" href="https://pay.voompcreators.com.br">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preload" as="image" href="/img/mockup-preco4.webp" fetchpriority="high">
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9GCCZSW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- ============ 0. BARRA DO TOPO ============ -->
+    <div class="topbar" id="faixa-topo">Somente hoje, desconto especial de <s>R$147</s> por <b>R$97</b></div>
+    <script>
+        // a faixa se atualiza sozinha todo dia: pega a data do navegador de quem
+        // está vendo a página e escreve "dia X de mês". O texto que já vem no HTML
+        // é o fallback, pra quem estiver com JS desligado.
+        (function () {
+            var faixa = document.getElementById('faixa-topo');
+            if (!faixa) return;
+            var hoje = new Date();
+            var dia = hoje.toLocaleDateString('pt-BR', { day: 'numeric' });
+            var mes = hoje.toLocaleDateString('pt-BR', { month: 'long' });
+            faixa.innerHTML = 'Somente hoje, dia <b>' + dia + ' de ' + mes + '</b>, desconto especial de <s>R$147</s> por <b>R$97</b>';
+        })();
+    </script>
+
+
+    <!-- ============ 1. HERO ============ -->
+    <section class="sec sec--hero">
+        <div class="w hero">
+            <div>
+                <div class="logo">CAIXA LIVRE 2.0</div>
+
+                <h1>Organize a sua vida financeira em apenas <span class="it">30 minutos por semana.</span></h1>
+
+                <p class="txt">Acesse uma planilha que se preenche sozinha, do jeito que quem ganha bem deveria ter. Pare de gastar tudo que ganha todo mês e <b>tenha clareza total dos seus números.</b></p>
+
+                <div class="hero-prova">+ de 2.500 pessoas já estão usando o Caixa Livre 2.0</div>
+
+                <div class="hero-acao">
+                    <a class="btn" href="https://pay.voompcreators.com.br/14331/offer/k2hkHP/?b_id_1=14527&amp;b_offer_1=QowVGx&amp;b_id_2=14525&amp;b_offer_2=i4sTeU&amp;ch_id=2705">QUERO MEU CAIXA LIVRE</a>
+                    <a class="btn btn--ghost" href="#planilhas">Veja a planilha por dentro</a>
+                </div>
+
+                <div class="selos">
+                    <div class="selo">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1L3 5v6c0 5.6 3.8 10.7 9 12 5.2-1.3 9-6.4 9-12V5l-9-4zm-1 16l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10l-7 7z"/></svg>
+                        <span>Compra 100% segura</span>
+                    </div>
+                    <div class="selo">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+                        <span>Pix ou cartão</span>
+                    </div>
+                    <div class="selo">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+                        <span>Acesso imediato</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-img">
+                <img src="/img/mockup-preco4.webp" alt="Tudo que você recebe no Caixa Livre 2.0" width="1280" height="1080" fetchpriority="high" decoding="async">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============ 2. A DOR ============ -->
+    <section class="sec sec--esc">
+        <div class="w g2">
+            <div class="dor-foto">
+                <img src="/img/mulher_preocupada_com_gastos.webp" alt="Mulher preocupada com os gastos do mês" width="1920" height="2212" loading="lazy" decoding="async">
+            </div>
+
+            <div class="dor-card">
+                <h2>Eu sei... você trabalha o mês inteiro <span class="it">e não sobra 1 real,</span> não é mesmo?</h2>
+                <p class="txt m1">E aí você passa o mês inteiro com pensamentos como:</p>
+
+                <ul class="dor-list">
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm5 13.6L15.6 17 12 13.4 8.4 17 7 15.6 10.6 12 7 8.4 8.4 7 12 10.6 15.6 7 17 8.4 13.4 12 17 15.6z"/></svg>
+                        <span>Chega o dia 20 do mês e você não sabe pra onde o seu dinheiro foi.</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm5 13.6L15.6 17 12 13.4 8.4 17 7 15.6 10.6 12 7 8.4 8.4 7 12 10.6 15.6 7 17 8.4 13.4 12 17 15.6z"/></svg>
+                        <span>Já tentou planilha antes e desistiu, porque tinha que digitar gasto por gasto.</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm5 13.6L15.6 17 12 13.4 8.4 17 7 15.6 10.6 12 7 8.4 8.4 7 12 10.6 15.6 7 17 8.4 13.4 12 17 15.6z"/></svg>
+                        <span>Ganha bem, trabalha muito, e mesmo assim não tem nada guardado.</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm5 13.6L15.6 17 12 13.4 8.4 17 7 15.6 10.6 12 7 8.4 8.4 7 12 10.6 15.6 7 17 8.4 13.4 12 17 15.6z"/></svg>
+                        <span>Olha os números e não sabe o que fazer com eles.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="wn m3">
+            <h2>Agora eu te pergunto...</h2>
+            <p class="txt m1">Se você pudesse ver, num lugar só, pra onde cada real está indo, e saber exatamente quanto dá pra gastar e quanto dá pra guardar todo mês, você usaria?</p>
+            <p class="sub m2">Se a sua resposta for <span class="vd">"SIM", o Caixa Livre 2.0</span> é para você.</p>
+        </div>
+    </section>
+
+
+    <!-- ============ 3. A SOLUÇÃO + PILARES + PLANILHA POR DENTRO ============ -->
+    <section class="sec sec--creme" id="planilhas">
+        <div class="wn">
+            <h2>A solução que você precisa pra parar de terminar o mês no zero <span class="it">está aqui.</span></h2>
+            <p class="txt m2">O Caixa Livre 2.0 não é mais um app de finanças pra você abandonar em três dias, nem mais um curso solto que te dá teoria e te deixa perdida na hora de aplicar. É a ferramenta, o passo a passo e alguém pra te dizer o que fazer com os números, tudo junto.</p>
+        </div>
+
+        <div class="w g3 m3">
+            <div class="pilar">
+                <div class="pilar-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
+                <h3>Automático</h3>
+                <p class="txt">Você cola o extrato do banco e ela categoriza tudo sozinha, sem digitar gasto por gasto.</p>
+            </div>
+            <div class="pilar">
+                <div class="pilar-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.3 5.1L20 9l-5.7 1.9L12 16l-2.3-5.1L4 9l5.7-1.9L12 2zm6 12l1.2 2.6L22 18l-2.8 1.4L18 22l-1.2-2.6L14 18l2.8-1.4L18 14z"/></svg></div>
+                <h3>Inteligente</h3>
+                <p class="txt">A Clara lê os seus números e aponta o que está errado e o que ajustar primeiro.</p>
+            </div>
+            <div class="pilar">
+                <div class="pilar-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm0 18a8 8 0 118-8 8 8 0 01-8 8zm.8-13h-1.6v5.9l4.6 2.8.8-1.4-3.8-2.3z"/></svg></div>
+                <h3>Rápido</h3>
+                <p class="txt">30 minutos por semana e você sabe exatamente quanto ainda dá pra gastar.</p>
+            </div>
+        </div>
+
+        <div class="w carro">
+            <button class="carro-nav carro-nav--prev" type="button" data-carro="planilha" data-dir="-1" aria-label="Ver imagem anterior">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 7.4L14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg>
+            </button>
+            <div class="carro-trilho" id="carro-planilha">
+                <div class="carro-item"><img src="/img/planilha-pc.webp" alt="Planilha do Caixa Livre aberta no computador" width="1536" height="1024" loading="lazy" decoding="async"></div>
+                <div class="carro-item"><img src="/img/aba saidas.webp" alt="Aba de saídas da planilha" width="1600" height="992" loading="lazy" decoding="async"></div>
+                <div class="carro-item"><img src="/img/analise-mes.webp" alt="Análise do mês na planilha" width="879" height="749" loading="lazy" decoding="async"></div>
+            </div>
+            <button class="carro-nav carro-nav--next" type="button" data-carro="planilha" data-dir="1" aria-label="Ver próxima imagem">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.6 16.6L10 18l6-6-6-6-1.4 1.4L13.2 12z"/></svg>
+            </button>
+        </div>
+
+        <div class="cta"><a class="btn" href="https://pay.voompcreators.com.br/14331/offer/k2hkHP/?b_id_1=14527&amp;b_offer_1=QowVGx&amp;b_id_2=14525&amp;b_offer_2=i4sTeU&amp;ch_id=2705">QUERO MEU CAIXA LIVRE</a></div>
+    </section>
+
+
+    <!-- ============ 4. ENTENDA O QUE VAI RECEBER ============ -->
+    <section class="sec sec--slim sec--creme2">
+        <div class="wn">
+            <h2>Entenda o que você vai receber <span class="it">quando entrar no Caixa Livre 2.0:</span></h2>
+            <p class="txt m2">O Caixa Livre 2.0 é um sistema completo de organização financeira pessoal: a planilha que preenche sozinha, as aulas que te levam pelo caminho inteiro e uma consultora com IA que olha os seus números e responde sobre a sua vida.</p>
+        </div>
+    </section>
+
+
+    <!-- ============ 5. O QUE VOCÊ RECEBE (cards) ============ -->
+    <section class="sec sec--esc">
+        <div class="w">
+            <h2 class="wn mb3">O que já está pronto <span class="it">te esperando lá dentro</span></h2>
+
+            <div class="g2c">
+                <div class="card">
+                    <div class="card-img"><img src="/img/planilha-pc.webp" alt="Planilha financeira automatizada" width="1536" height="1024" loading="lazy" decoding="async"></div>
+                    <span class="tagn">01</span>
+                    <h3>Planilha financeira automatizada</h3>
+                    <p class="txt">Você copia o extrato do banco, cola, e ela categoriza tudo sozinha, calcula quanto do seu salário já foi comprometido e mostra quanto ainda dá pra gastar. Sem digitar gasto por gasto e sem saber Excel.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-img"><img src="/img/mockup-preco4.webp" alt="As 11 aulas do Caixa Livre 2.0" width="1280" height="1080" loading="lazy" decoding="async"></div>
+                    <span class="tagn">02</span>
+                    <h3>11 aulas diretas ao ponto</h3>
+                    <p class="txt">Reunir os documentos, preencher pela primeira vez, montar o planejamento do mês e ler a análise. Sem teoria solta e sem discurso de cortar o cafezinho. Você assiste e aplica no mesmo dia.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-img">
+                        <video src="/video/stories-720.webm" poster="/video/stories-poster.jpg" autoplay loop muted playsinline preload="none" width="720" height="960"></video>
+                    </div>
+                    <span class="tagn">03</span>
+                    <h3>Clara, sua consultora com IA dentro da planilha</h3>
+                    <p class="txt">Toda planilha entrega número e deixa você decidindo sozinha. A Clara é uma inteligência artificial treinada com o meu método. Ela olha os seus números, do seu mês, aponta onde está vazando e responde o que você perguntaria numa consultoria.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-img"><img src="/img/aba saidas.webp" alt="PDFs de apoio de cada aula" width="1600" height="992" loading="lazy" decoding="async"></div>
+                    <span class="tagn">04</span>
+                    <h3>PDFs de apoio de cada aula</h3>
+                    <p class="txt">O resumo de cada aula em PDF, pra você revisar rápido sem precisar voltar no vídeo toda vez que bater uma dúvida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============ marquee ============ -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-in">
+            <span>Caixa Livre 2.0 • Caixa Livre 2.0 • Caixa Livre 2.0 • Caixa Livre 2.0 • Caixa Livre 2.0 • Caixa Livre 2.0 • Caixa Livre 2.0 • Caixa Livre 2.0 • </span>
+            <span>Caixa Livre 2.0 • Caixa Livre 2.0 • Caixa Livre 2.0 • Caixa Livre 2.0 • Caixa Livre 2.0 • Caixa Livre 2.0 • Caixa Livre 2.0 • Caixa Livre 2.0 • </span>
+        </div>
+    </div>
+
+
+    <!-- ============ 6. AINDA NÃO ACABOU (bônus) ============ -->
+    <section class="sec sec--creme">
+        <div class="wn mb3">
+            <h2 class="tit-xl">AINDA NÃO ACABOU!</h2>
+            <p class="sub m1">Você também vai receber:</p>
+        </div>
+
+        <div class="w g2c">
+            <div class="card card--claro">
+                <div class="card-img"><img src="/img/analise-mes.webp" alt="Checklist semanal de 30 minutos" width="879" height="749" loading="lazy" decoding="async"></div>
+                <span class="tagn" style="color:var(--verde-d)">BÔNUS 01</span>
+                <h3>Checklist semanal de 30 minutos</h3>
+                <p class="txt">A rotina exata que mantém tudo funcionando sem virar mais uma obrigação na sua semana. Você abre no domingo, faz o checklist, e sai sabendo quanto vai sobrar no mês.</p>
+            </div>
+
+            <div class="card card--claro">
+                <div class="card-img"><img src="/img/analise clara.webp" alt="Diagnóstico Caixa Livre com a Clara" width="738" height="1600" loading="lazy" decoding="async"></div>
+                <span class="tagn" style="color:var(--verde-d)">BÔNUS 02</span>
+                <h3>Diagnóstico Caixa Livre com a Clara</h3>
+                <p class="txt">Logo na primeira semana você já recebe o raio-x do seu mês: onde está vazando dinheiro, quanto dá pra recuperar e o que ajustar primeiro.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============ marquee ============ -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-in">
+            <span>Bônus incluso • Bônus incluso • Bônus incluso • Bônus incluso • Bônus incluso • Bônus incluso • Bônus incluso • Bônus incluso • </span>
+            <span>Bônus incluso • Bônus incluso • Bônus incluso • Bônus incluso • Bônus incluso • Bônus incluso • Bônus incluso • Bônus incluso • </span>
+        </div>
+    </div>
+
+
+    <!-- ============ 7. TRÊS PASSOS ============ -->
+    <section class="sec sec--esc">
+        <div class="w">
+            <h2 class="wn mb3">Compre agora e comece <span class="it">em 3 passos simples</span></h2>
+
+            <div class="g3">
+                <div class="passo">
+                    <span class="passo-n">PASSO 1</span>
+                    <h3>Faça sua compra</h3>
+                    <p class="txt">Em poucos minutos você recebe seu acesso na sua caixa de entrada.</p>
+                </div>
+                <div class="passo">
+                    <span class="passo-n">PASSO 2</span>
+                    <h3>Abra a planilha</h3>
+                    <p class="txt">Tudo fica disponível na hora, no seu celular ou no computador. É só colar o extrato.</p>
+                </div>
+                <div class="passo">
+                    <span class="passo-n">PASSO 3</span>
+                    <h3>Tudo pronto!</h3>
+                    <p class="txt">Agora é só seguir o passo a passo e ver o dinheiro sobrando no fim do mês.</p>
+                </div>
+            </div>
+
+            <div class="cta"><a class="btn" href="https://pay.voompcreators.com.br/14331/offer/k2hkHP/?b_id_1=14527&amp;b_offer_1=QowVGx&amp;b_id_2=14525&amp;b_offer_2=i4sTeU&amp;ch_id=2705">QUERO MEU CAIXA LIVRE</a></div>
+        </div>
+    </section>
+
+
+    <!-- ============ 8. O QUE O CAIXA LIVRE FARÁ POR VOCÊ ============ -->
+    <section class="sec sec--creme">
+        <div class="w g2">
+            <div class="esq">
+                <h2>O que o Caixa Livre 2.0 <span class="it">fará por você:</span></h2>
+            </div>
+
+            <ul class="checks">
+                <li>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-5-5 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
+                    <span><b>Enxergar pra onde cada real vai</b>, num lugar só.</span>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-5-5 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
+                    <span><b>Saber em 30 minutos por semana</b> quanto ainda dá pra gastar.</span>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-5-5 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
+                    <span><b>Guardar até 30% do salário</b> sem ganhar um centavo a mais.</span>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-5-5 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
+                    <span><b>Achar os gastos que passam batidos</b> todo mês.</span>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-5-5 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
+                    <span><b>Parar de depender de força de vontade</b> pra guardar.</span>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-5-5 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
+                    <span><b>Ter uma consultora dentro da planilha</b> te dizendo o que fazer.</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="cta"><a class="btn" href="https://pay.voompcreators.com.br/14331/offer/k2hkHP/?b_id_1=14527&amp;b_offer_1=QowVGx&amp;b_id_2=14525&amp;b_offer_2=i4sTeU&amp;ch_id=2705">QUERO MEU CAIXA LIVRE</a></div>
+    </section>
+
+
+    <!-- ============ 9. PROVA SOCIAL ============ -->
+    <section class="sec sec--esc">
+        <div class="w">
+            <h2 class="wn mb2"><span class="it">Não é promessa, é o que já aconteceu.</span><br>Mais de 2.500 pessoas já estão usando o Caixa Livre 2.0.</h2>
+
+            <div class="carro carro--depo">
+                <button class="carro-nav carro-nav--prev" type="button" data-carro="depo" data-dir="-1" aria-label="Ver depoimento anterior">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 7.4L14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg>
+                </button>
+                <div class="carro-trilho" id="carro-depo">
+                    <div class="carro-item"><img src="/img/Depoimentos/jhenifer.webp" alt="Depoimento da Jhenifer" width="757" height="446" loading="lazy" decoding="async"></div>
+                    <div class="carro-item"><img src="/img/Depoimentos/Andressa.webp" alt="Depoimento da Andressa" width="575" height="620" loading="lazy" decoding="async"></div>
+                    <div class="carro-item"><img src="/img/Depoimentos/Eloisa 2 - CXL.webp" alt="Depoimento da Eloisa" width="1051" height="1836" loading="lazy" decoding="async"></div>
+                    <div class="carro-item"><img src="/img/Depoimentos/tati.webp" alt="Depoimento da Tati" width="867" height="1442" loading="lazy" decoding="async"></div>
+                    <div class="carro-item"><img src="/img/Depoimentos/endine.webp" alt="Depoimento da Endine" width="1074" height="881" loading="lazy" decoding="async"></div>
+                    <div class="carro-item"><img src="/img/Depoimentos/francisco.webp" alt="Depoimento do Francisco" width="575" height="294" loading="lazy" decoding="async"></div>
+                    <div class="carro-item"><img src="/img/Depoimentos/endressa.webp" alt="Depoimento de aluna do Caixa Livre" width="575" height="620" loading="lazy" decoding="async"></div>
+                </div>
+                <button class="carro-nav carro-nav--next" type="button" data-carro="depo" data-dir="1" aria-label="Ver próximo depoimento">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.6 16.6L10 18l6-6-6-6-1.4 1.4L13.2 12z"/></svg>
+                </button>
+            </div>
+
+            <div class="cta"><a class="btn" href="https://pay.voompcreators.com.br/14331/offer/k2hkHP/?b_id_1=14527&amp;b_offer_1=QowVGx&amp;b_id_2=14525&amp;b_offer_2=i4sTeU&amp;ch_id=2705">QUERO MEU CAIXA LIVRE</a></div>
+        </div>
+    </section>
+
+
+    <!-- ============ 10. PARA QUEM É ============ -->
+    <section class="sec sec--esc2">
+        <div class="w g2">
+            <div class="autor-foto">
+                <img src="/img/leticia-profile.webp" alt="Leticia Kratka" width="1040" height="1558" loading="lazy" decoding="async">
+            </div>
+
+            <div class="esq">
+                <h2 class="tit-xl mb2"><span class="it">Para quem é?</span></h2>
+                <p class="txt mb2">Eu fiz o Caixa Livre para você que:</p>
+
+                <ul class="checks">
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-5-5 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
+                        <span>Deseja organizar de verdade sua renda para fazer sobrar dinheiro.</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-5-5 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
+                        <span>É CLT, empresário, servidor público ou autônomo.</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-5-5 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
+                        <span>Gasta tudo todos os meses e não sabe se controlar.</span>
+                    </li>
+                </ul>
+
+                <div class="cta cta--esq"><a class="btn" href="https://pay.voompcreators.com.br/14331/offer/k2hkHP/?b_id_1=14527&amp;b_offer_1=QowVGx&amp;b_id_2=14525&amp;b_offer_2=i4sTeU&amp;ch_id=2705">QUERO MEU CAIXA LIVRE</a></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============ 11. RECAPITULANDO ============ -->
+    <section class="sec sec--esc">
+        <div class="w">
+            <h2 class="tit-xl">RECAPITULANDO...</h2>
+            <p class="sub m1 mb3" style="color:var(--claro-m)">Veja tudo o que você vai receber no Caixa Livre 2.0:</p>
+
+            <ul class="recap">
+                <li>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-5-5 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
+                    <span>Planilha financeira automatizada</span>
+                    <b><s>R$ 297,00</s></b>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-5-5 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
+                    <span>11 aulas com o passo a passo completo</span>
+                    <b><s>R$ 197,00</s></b>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-5-5 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
+                    <span>Clara, sua consultora com IA</span>
+                    <b><s>R$ 197,00</s></b>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-5-5 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
+                    <span>PDFs de apoio de cada aula</span>
+                    <b><s>R$ 97,00</s></b>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-5-5 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
+                    <span><b style="color:var(--gold);font-family:var(--b);font-weight:700">BÔNUS 1:</b> Checklist semanal de 30 minutos</span>
+                    <b><s>R$ 67,00</s></b>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-5-5 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg>
+                    <span><b style="color:var(--gold);font-family:var(--b);font-weight:700">BÔNUS 2:</b> Diagnóstico Caixa Livre com a Clara</span>
+                    <b><s>R$ 197,00</s></b>
+                </li>
+            </ul>
+
+            <p class="txt m3">No total, tudo isso deveria custar:</p>
+            <p class="tit-xl m1"><span class="risc">R$ 1.052,00</span></p>
+        </div>
+    </section>
+
+
+    <!-- ============ 12. PREÇO ============ -->
+    <section class="sec sec--creme" id="preco">
+        <div class="wn mb3">
+            <h2>Mas hoje você tem acesso ao Caixa Livre 2.0 junto com todos os bônus <span class="it">por apenas:</span></h2>
+        </div>
+
+        <div class="oferta">
+            <div class="fita">ACESSO IMEDIATO</div>
+
+            <div class="logo logo--esc" style="margin-bottom:22px">CAIXA LIVRE 2.0</div>
+
+            <p class="preco"><small>12x de</small>R$9,70</p>
+            <p class="avista">ou R$97 à vista</p>
+            <p class="pordia">Investimento de apenas R$0,26 por dia pra ter dinheiro sobrando</p>
+
+            <div class="cta" style="margin-top:26px">
+                <a class="btn btn--full" href="https://pay.voompcreators.com.br/14331/offer/k2hkHP/?b_id_1=14527&amp;b_offer_1=QowVGx&amp;b_id_2=14525&amp;b_offer_2=i4sTeU&amp;ch_id=2705">QUERO MEU CAIXA LIVRE</a>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="pgto">
+                <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1L3 5v6c0 5.6 3.8 10.7 9 12 5.2-1.3 9-6.4 9-12V5l-9-4zm-1 16l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10l-7 7z"/></svg> Compra 100% segura</span>
+                <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg> Pix ou cartão</span>
+                <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg> Acesso imediato</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============ 13. DUAS OPÇÕES ============ -->
+    <section class="sec sec--esc">
+        <div class="w">
+            <h2 class="wn mb3">Agora, você tem <span class="it">duas opções.</span></h2>
+
+            <div class="g2c">
+                <div class="op op--1">
+                    <div class="op-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm5 13.6L15.6 17 12 13.4 8.4 17 7 15.6 10.6 12 7 8.4 8.4 7 12 10.6 15.6 7 17 8.4 13.4 12 17 15.6z"/></svg></div>
+                    <p class="op-tag">Opção 1</p>
+                    <p class="txt">Continuar chegando no dia 20 sem saber pra onde o dinheiro foi, tirando de novo da poupança pra fechar o mês, e daqui a um ano estar exatamente no mesmo lugar.</p>
+                </div>
+
+                <div class="op op--2">
+                    <div class="op-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-5-5 1.4-1.4L11 14.2l6.6-6.6L19 9l-8 8z"/></svg></div>
+                    <p class="op-tag">Opção 2</p>
+                    <p class="txt">Investir R$97 e finalmente enxergar pra onde o seu dinheiro está indo, pra fazer sobrar até 30% dos seus ganhos todo mês.</p>
+                </div>
+            </div>
+
+            <p class="sub m3 wn">Eu sei, e você também sabe: a opção 2 é a mais inteligente e é a que você mais precisa.</p>
+            <div class="cta"><a class="btn" href="https://pay.voompcreators.com.br/14331/offer/k2hkHP/?b_id_1=14527&amp;b_offer_1=QowVGx&amp;b_id_2=14525&amp;b_offer_2=i4sTeU&amp;ch_id=2705">GARANTIR MEU ACESSO AGORA</a></div>
+        </div>
+    </section>
+
+
+    <!-- ============ 14. GARANTIA ============ -->
+    <section class="sec sec--esc">
+        <div class="w g2">
+            <div>
+                <div class="selo-g"><span><b>7</b><i>DIAS DE GARANTIA</i></span></div>
+            </div>
+            <div class="esq">
+                <p class="txt mb2">Se por qualquer motivo você não se adaptar ou não ficar satisfeita com o Caixa Livre 2.0,</p>
+                <h2>você tem até 7 dias de garantia <span class="it">para solicitar o valor investido.</span></h2>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============ 15. AUTORIDADE ============ -->
+    <section class="sec sec--creme">
+        <div class="w g2 flip">
+            <div class="autor-foto">
+                <img src="/img/foto whatsapp.webp" alt="Leticia Kratka, criadora do Caixa Livre 2.0" width="920" height="914" loading="lazy" decoding="async">
+            </div>
+
+            <div class="esq">
+                <p class="txt mb1">Muito prazer! Meu nome é</p>
+                <h2 class="mb1">Leticia Kratka,</h2>
+                <p class="sub mb2" style="color:var(--verde-d)">é a criadora do Caixa Livre 2.0</p>
+
+                <p class="txt mb1">Sou consultora financeira e passei os últimos anos sentando com mais de 500 pessoas pra organizar a vida financeira de perto, uma a uma.</p>
+                <p class="txt mb1">Eu esperava encontrar gente que ganhava pouco. Encontrei o contrário: gente com uma renda que qualquer um acharia ótima, trabalhando muito, e com nada guardado. Quase todas me disseram a mesma frase: "eu não tinha noção".</p>
+                <p class="txt">Peguei o mesmo sistema que aplico sentada do lado da pessoa e transformei em algo que você consegue seguir sozinha, no seu ritmo. Agora chegou a sua vez de copiar e ver o dinheiro sobrar todo mês.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============ 16. FAQ + CONTATO ============ -->
+    <section class="sec sec--creme2">
+        <div class="w g2" style="align-items:stretch">
+            <div class="faq">
+                <details open>
+                    <summary>Já tentei planilha antes e desisti. Por que dessa vez seria diferente?</summary>
+                    <p>Porque aqui você não fica sozinha tentando decifrar uma planilha muda. Você cola o extrato e ela organiza sozinha, tem aulas te guiando passo a passo, e tem a Clara analisando seus números e dizendo o que ajustar.</p>
+                </details>
+                <details>
+                    <summary>Por que pagar R$97 se tem planilha grátis na internet?</summary>
+                    <p>Planilha grátis te dá campo pra preencher. O Caixa Livre te dá o preenchimento automático, a leitura dos números e o próximo passo. É a diferença entre ter uma tabela e ter um sistema com uma consultora dentro.</p>
+                </details>
+                <details>
+                    <summary>Preciso saber mexer em Excel?</summary>
+                    <p>Não. Se você sabe copiar e colar, sabe usar. As aulas mostram o caminho inteiro e a Clara resolve a parte de interpretar.</p>
+                </details>
+                <details>
+                    <summary>Por quanto tempo tenho acesso?</summary>
+                    <p>Você tem 7 dias de acesso a partir da confirmação da compra.</p>
+                </details>
+                <details>
+                    <summary>Funciona no celular?</summary>
+                    <p>Funciona. A planilha e a Clara rodam no celular e no computador.</p>
+                </details>
+                <details>
+                    <summary>Em casal, como funciona?</summary>
+                    <p>Dá pra usar junto, com as entradas e saídas dos dois no mesmo lugar, ou cada um com a sua. A maioria dos casais prefere uma só, com tudo somado.</p>
+                </details>
+                <details>
+                    <summary>Funciona fora do Brasil, com outra moeda?</summary>
+                    <p>Funciona. A planilha aceita qualquer moeda, é só ajustar na configuração inicial.</p>
+                </details>
+            </div>
+
+            <div class="contato">
+                <div class="contato-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4a2 2 0 00-2 2v18l4-4h14a2 2 0 002-2V4a2 2 0 00-2-2zM7 9h10v2H7V9zm0 4h7v2H7v-2zM7 5h10v2H7V5z"/></svg></div>
+                <h2>Ficou com alguma <span class="it">dúvida?</span></h2>
+                <p class="txt">Manda a sua pergunta pra gente, mesmo que pareça boba. É melhor tirar a dúvida agora do que ficar meses adiando de novo.</p>
+                <p><a class="mailto" href="mailto:contato@leticiakratka.com.br">contato@leticiakratka.com.br</a></p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============ 17. RODAPÉ ============ -->
+    <footer class="rodape">
+        <div class="w">
+            <div class="logo">CAIXA LIVRE 2.0</div>
+            <p class="legal mb2">Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site. A compra desse material não garante nenhum tipo de resultado. Fazemos todos os esforços para indicar claramente e mostrar todas as provas do produto e usamos resultados reais de alunos.</p>
+            <p class="legal">LK APOIO ADMINISTRATIVO | CNPJ: 42.091.414/0001-13</p>
+            <p class="legal m1">Copyright © 2026 Todos os Direitos Reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // setas dos carrosséis: rolam um item por clique
+        document.querySelectorAll('.carro-nav').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var trilho = document.getElementById('carro-' + btn.dataset.carro);
+                if (!trilho) return;
+                var item = trilho.querySelector('.carro-item');
+                if (!item) return;
+                var passo = item.getBoundingClientRect().width + 18;
+                trilho.scrollBy({ left: passo * Number(btn.dataset.dir), behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+
+</html>
