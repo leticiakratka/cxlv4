@@ -328,7 +328,12 @@ h3 { font-size: clamp(1.12rem, 2vw, 22px) }
     border-radius: 18px;
     padding: clamp(26px, 3.4vw, 44px);
     text-align: left;
+    /* cor propria: o card e escuro independente da banda em que ele esta */
+    color: var(--claro);
 }
+
+.dor-card h2 { color: var(--claro) }
+.dor-card .txt { color: #D8CCBF }
 
 .dor-list { list-style: none; margin-top: 24px; display: grid; gap: 16px }
 
@@ -543,6 +548,18 @@ h3 { font-size: clamp(1.12rem, 2vw, 22px) }
 .checks svg { width: 22px; height: 22px; fill: var(--verde); margin-top: 2px }
 .sec--esc .checks li, .sec--esc2 .checks li { color: #E4DACE }
 .sec--esc .checks svg, .sec--esc2 .checks svg { fill: var(--verde-cl) }
+
+/* ---------- ajustes pra quem foi de banda escura pra clara ---------- */
+/* o verde claro nao tem contraste suficiente sobre creme */
+.sec--creme .vd,
+.sec--creme2 .vd { color: var(--verde-d) }
+
+/* selo de garantia: texto e anel invertem sobre banda clara */
+.sec--creme .selo-g,
+.sec--creme2 .selo-g {
+    color: var(--esp);
+    border-color: #B39668;
+}
 
 /* ---------- duas opções ---------- */
 .op {
