@@ -19,9 +19,16 @@
     <link rel="dns-prefetch" href="https://pay.voompcreators.com.br">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+            rel="stylesheet">
+    </noscript>
     <link rel="stylesheet" href="style.css">
 
     <link rel="preload" as="image" href="/img/mockup-preco4.webp" fetchpriority="high">
@@ -93,7 +100,7 @@
     <section class="sec sec--creme2">
         <div class="w g2">
             <div class="dor-foto">
-                <img src="/img/mulher_preocupada_com_gastos.webp" alt="Mulher preocupada com os gastos do mês" width="1920" height="2212" loading="lazy" decoding="async">
+                <img src="/img/mulher_preocupada_com_gastos.webp" alt="Mulher preocupada com os gastos do mês" width="1400" height="1613" loading="lazy" decoding="async">
             </div>
 
             <div class="dor-card">
@@ -159,8 +166,8 @@
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 7.4L14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg>
             </button>
             <div class="carro-trilho" id="carro-planilha">
-                <div class="carro-item"><img src="/img/planilha-pc.webp" alt="Planilha do Caixa Livre aberta no computador" width="1536" height="1024" loading="lazy" decoding="async"></div>
-                <div class="carro-item"><img src="/img/aba saidas.webp" alt="Aba de saídas da planilha" width="1600" height="992" loading="lazy" decoding="async"></div>
+                <div class="carro-item"><img src="/img/planilha-pc.webp" alt="Planilha do Caixa Livre aberta no computador" width="1300" height="867" loading="lazy" decoding="async"></div>
+                <div class="carro-item"><img src="/img/aba saidas.webp" alt="Aba de saídas da planilha" width="1300" height="806" loading="lazy" decoding="async"></div>
                 <div class="carro-item"><img src="/img/analise-mes.webp" alt="Análise do mês na planilha" width="879" height="749" loading="lazy" decoding="async"></div>
             </div>
             <button class="carro-nav carro-nav--next" type="button" data-carro="planilha" data-dir="1" aria-label="Ver próxima imagem">
@@ -188,7 +195,7 @@
 
             <div class="g2c">
                 <div class="card">
-                    <div class="card-img"><img src="/img/planilha-pc.webp" alt="Planilha financeira automatizada" width="1536" height="1024" loading="lazy" decoding="async"></div>
+                    <div class="card-img"><img src="/img/planilha-pc.webp" alt="Planilha financeira automatizada" width="1300" height="867" loading="lazy" decoding="async"></div>
                     <span class="tagn">01</span>
                     <h3>Planilha financeira automatizada</h3>
                     <p class="txt">Você copia o extrato do banco, cola, e ela categoriza tudo sozinha, calcula quanto do seu salário já foi comprometido e mostra quanto ainda dá pra gastar. Sem digitar gasto por gasto e sem saber Excel.</p>
@@ -203,7 +210,11 @@
 
                 <div class="card">
                     <div class="card-img">
-                        <video src="/video/stories-720.webm" poster="/video/stories-poster.jpg" autoplay loop muted playsinline preload="none" width="720" height="960"></video>
+                        <video data-lazy-video poster="/video/stories-poster.jpg" width="720" height="960"
+                            preload="none" loop muted playsinline>
+                            <source data-src="/video/stories-720.webm" type="video/webm">
+                            <source data-src="/video/stories-720.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <span class="tagn">03</span>
                     <h3>Clara, sua consultora com IA dentro da planilha</h3>
@@ -211,7 +222,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-img"><img src="/img/aba saidas.webp" alt="PDFs de apoio de cada aula" width="1600" height="992" loading="lazy" decoding="async"></div>
+                    <div class="card-img"><img src="/img/aba saidas.webp" alt="PDFs de apoio de cada aula" width="1300" height="806" loading="lazy" decoding="async"></div>
                     <span class="tagn">04</span>
                     <h3>PDFs de apoio de cada aula</h3>
                     <p class="txt">O resumo de cada aula em PDF, pra você revisar rápido sem precisar voltar no vídeo toda vez que bater uma dúvida.</p>
@@ -343,7 +354,7 @@
                 <div class="carro-trilho" id="carro-depo">
                     <div class="carro-item"><img src="/img/Depoimentos/jhenifer.webp" alt="Depoimento da Jhenifer" width="757" height="446" loading="lazy" decoding="async"></div>
                     <div class="carro-item"><img src="/img/Depoimentos/Andressa.webp" alt="Depoimento da Andressa" width="575" height="620" loading="lazy" decoding="async"></div>
-                    <div class="carro-item"><img src="/img/Depoimentos/Eloisa 2 - CXL.webp" alt="Depoimento da Eloisa" width="1051" height="1836" loading="lazy" decoding="async"></div>
+                    <div class="carro-item"><img src="/img/Depoimentos/Eloisa 2 - CXL.webp" alt="Depoimento da Eloisa" width="900" height="1573" loading="lazy" decoding="async"></div>
                     <div class="carro-item"><img src="/img/Depoimentos/tati.webp" alt="Depoimento da Tati" width="867" height="1442" loading="lazy" decoding="async"></div>
                     <div class="carro-item"><img src="/img/Depoimentos/endine.webp" alt="Depoimento da Endine" width="1074" height="881" loading="lazy" decoding="async"></div>
                     <div class="carro-item"><img src="/img/Depoimentos/francisco.webp" alt="Depoimento do Francisco" width="575" height="294" loading="lazy" decoding="async"></div>
@@ -591,6 +602,45 @@
                 trilho.scrollBy({ left: passo * Number(btn.dataset.dir), behavior: 'smooth' });
             });
         });
+    </script>
+
+    <script>
+        /* O vídeo só baixa quando chega perto da tela. Antes ele tinha autoplay e
+           preload="none" mas sem lazy-load real, então baixava na hora mesmo
+           estando lá embaixo num carrossel, competindo com o LCP.
+           O poster segura o lugar enquanto isso, então o layout não pula. */
+        (function () {
+            var videos = document.querySelectorAll('video[data-lazy-video]');
+            if (!videos.length) return;
+
+            function carregar(v) {
+                if (v.dataset.carregado) return;
+                v.dataset.carregado = '1';
+                var fontes = v.querySelectorAll('source[data-src]');
+                for (var i = 0; i < fontes.length; i++) {
+                    fontes[i].src = fontes[i].dataset.src;
+                }
+                v.load();
+                var p = v.play();
+                if (p && p.catch) p.catch(function () { });
+            }
+
+            if (!('IntersectionObserver' in window)) {
+                Array.prototype.forEach.call(videos, carregar);
+                return;
+            }
+
+            var obs = new IntersectionObserver(function (entradas) {
+                entradas.forEach(function (e) {
+                    if (e.isIntersecting) {
+                        carregar(e.target);
+                        obs.unobserve(e.target);
+                    }
+                });
+            }, { rootMargin: '300px' });
+
+            Array.prototype.forEach.call(videos, function (v) { obs.observe(v); });
+        })();
     </script>
 </body>
 
