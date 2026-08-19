@@ -591,6 +591,25 @@
     </footer>
 
     <script>
+        // passa os parâmetros utm da url pro link do checkout, pra manter
+        // o rastreamento de origem/campanha até a compra
+        (function () {
+            var params = new URLSearchParams(window.location.search);
+            var utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+            var utmString = '';
+            utmParams.forEach(function (param) {
+                if (params.has(param)) {
+                    utmString += '&' + param + '=' + encodeURIComponent(params.get(param));
+                }
+            });
+            if (!utmString) return;
+            document.querySelectorAll('a.btn[href*="pay.voompcreators"]').forEach(function (link) {
+                link.href = link.href + utmString;
+            });
+        })();
+    </script>
+
+    <script>
         // setas dos carrosséis: rolam um item por clique
         document.querySelectorAll('.carro-nav').forEach(function (btn) {
             btn.addEventListener('click', function () {
