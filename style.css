@@ -768,6 +768,33 @@ h3 { font-size: clamp(1.12rem, 2vw, 22px) }
 .contato a.mailto { color: var(--verde-cl); font-weight: 600; text-decoration: none; word-break: break-word }
 .contato a.mailto:hover { text-decoration: underline }
 
+/* ---------- suporte via WhatsApp (mesmo padrão das outras páginas) ---------- */
+.suporte-avatar {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, .8);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .2);
+    margin: 0 auto;
+}
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: #fff;
+    font-family: var(--b);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 36px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: all .3s ease;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, .35);
+}
+.btn-whatsapp:hover { background: #1fb855; transform: translateY(-2px) }
+.btn-whatsapp svg { width: 20px; height: 20px }
+
 /* ---------- rodapé ---------- */
 .rodape { background: var(--esp); color: var(--claro-m); padding: clamp(40px, 5vw, 64px) var(--gut); text-align: center }
 .rodape .logo { margin-bottom: 20px }
