@@ -701,6 +701,28 @@ h3 { font-size: clamp(1.12rem, 2vw, 22px) }
     line-height: 1.1;
 }
 
+/* Lista das duas garantias (dobra 14). Numero em circulo a esquerda, no mesmo dourado
+   da borda do selo, pra amarrar com o "2 GARANTIAS" do lado. */
+.gar2 { list-style: none; margin: 18px 0 0; padding: 0; counter-reset: g }
+.gar2 li {
+    counter-increment: g;
+    position: relative;
+    padding-left: 46px;
+    margin-bottom: 16px;
+    font-size: clamp(15px, 1.9vw, 17px);
+    line-height: 1.55;
+}
+.gar2 li::before {
+    content: counter(g);
+    position: absolute; left: 0; top: -1px;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    border: 2px solid #A88B5E;
+    display: grid; place-items: center;
+    font-family: var(--h); font-size: 15px; line-height: 1;
+}
+.gar2 li:last-child { margin-bottom: 0 }
+
 .selo-g b { display: block; font-size: clamp(46px, 8vw, 72px); font-weight: 500; letter-spacing: -.01em }
 
 .selo-g i {

