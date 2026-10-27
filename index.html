@@ -46,6 +46,17 @@
     <link rel="stylesheet" href="style.css?v=160507">
 
     <link rel="preload" as="image" href="/img/mockup-preco4.webp" fetchpriority="high">
+
+    <!-- Rastreador do sistema de gestao (gestao.leticiakratka.com.br): visitas, cliques,
+         checkout e testes A/B desta pagina. So conta visita com sinal de pessoa e ignora robo. -->
+    <script src="https://gestao.leticiakratka.com.br/tracker.js" data-page="8f60758e-1bea-4c68-8787-6e53f85dc2d1" defer></script>
+    <!-- Anti-piscada do teste A/B: esconde headline e sub-headline (data-lck-headline /
+         data-lck-subheadline no hero) ate o rastreador aplicar a variante, no maximo 1,5 s.
+         Assim quem cai na versao B/C nao ve o titulo original trocando. Robo nao esconde. -->
+    <style>.lck-wait [data-lck-headline],.lck-wait [data-lck-subheadline]{visibility:hidden}</style>
+    <script>
+        if(!(navigator.webdriver||/bot|crawler|spider|crawling|headless|lighthouse|facebookexternalhit|facebot|meta-externalagent|meta-externalfetcher|preview|prerender/i.test(navigator.userAgent||''))){document.documentElement.classList.add('lck-wait');setTimeout(function(){document.documentElement.classList.remove('lck-wait')},1500);}
+    </script>
 </head>
 
 <body>
@@ -76,9 +87,9 @@
             <div>
                 <div class="logo">CAIXA LIVRE 2.0</div>
 
-                <h1>Organize a sua vida financeira em apenas <span class="it">30 minutos por semana.</span></h1>
+                <h1 data-lck-headline>Organize a sua vida financeira em apenas <span class="it">30 minutos por semana.</span></h1>
 
-                <p class="txt">Acesse ferramentas prontas para <span class="nowrap">COPIAR E COLAR</span>.<br>Pare de gastar tudo que ganha todo mês e <b>tenha clareza total dos seus números.</b></p>
+                <p class="txt" data-lck-subheadline>Acesse ferramentas prontas para <span class="nowrap">COPIAR E COLAR</span>.<br>Pare de gastar tudo que ganha todo mês e <b>tenha clareza total dos seus números.</b></p>
 
                 <div class="hero-prova">Mais de 2.500 pessoas já organizam a vida financeira com o Caixa Livre 2.0</div>
 
@@ -653,8 +664,13 @@
         ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'].forEach(function (k) {
           if (dados[k]) p.push(k + '=' + encodeURIComponent(dados[k]));
         });
-        /* utm_term original e descartado de proposito: o campo vira o veiculo do rastreio */
-        p.push('utm_term=' + encodeURIComponent(cookie('_fbp') + '~' + fbc() + '~' + sid()));
+        /* utm_term original e descartado de proposito: o campo vira o veiculo do rastreio.
+           4o campo = versao do teste A/B (ex: d106376c-B), vinda do sistema de gestao. Vazia
+           quando nao ha teste ativo ou o rastreador ainda nao respondeu; a venda entao cai em
+           "(sem versao)". Por isso aplica() roda de novo aos 2,5s e a cada clique. */
+        var versao = '';
+        try { versao = (window.LCK && window.LCK.versao) || ''; } catch (e) { versao = ''; }
+        p.push('utm_term=' + encodeURIComponent(cookie('_fbp') + '~' + fbc() + '~' + sid() + '~' + versao));
         return p.join('&');
       }
       var links = document.querySelectorAll('a[href*="chk.eduzz.com"]');
